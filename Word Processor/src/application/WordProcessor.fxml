@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="429.0" prefWidth="497.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <children>
+      <MenuBar fx:id="menuBar" layoutX="21.0" layoutY="2.0" AnchorPane.bottomAnchor="402.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#performOperations" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#performOperations" text="Save As" />
+                  <MenuItem mnemonicParsing="false" onAction="#performOperations" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#performOperations" text="Print" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onShown="#enable" text="Edit">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#undo" text="Undo" />
+                  <MenuItem mnemonicParsing="false" onAction="#redo" text="Redo" />
+                  <MenuItem fx:id="cut" disable="true" mnemonicParsing="false" onAction="#performOperations" text="Cut" />
+                  <MenuItem fx:id="copy" disable="true" mnemonicParsing="false" onAction="#performOperations" text="Copy" />
+                  <MenuItem mnemonicParsing="false" onAction="#performOperations" text="Paste" />
+              <MenuItem fx:id="delete" disable="true" mnemonicParsing="false" onAction="#performOperations" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#performOperations" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="document" onMouseClicked="#disable" prefHeight="399.0" prefWidth="497.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+         <effect>
+            <Blend />
+         </effect>
+      </TextArea>
+   </children>
+</AnchorPane>
